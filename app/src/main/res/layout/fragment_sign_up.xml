@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_background_picture"
-    tools:context=".presentation.SignInFragment">
+    tools:context=".presentation.SignUpFragment">
 
     <ImageView
         android:layout_width="130dp"
@@ -57,6 +57,20 @@
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/white"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp" />
+
+        <EditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,7 +92,7 @@
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn_background_red"
-        android:text="@string/string_enter_your_house"
+        android:text="@string/string_new_resident"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,7 +106,7 @@
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn_background_blue"
-        android:text="@string/string_new_resident"
+        android:text="@string/string_enter_your_house"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

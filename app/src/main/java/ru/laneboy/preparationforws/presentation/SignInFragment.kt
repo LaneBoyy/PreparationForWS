@@ -1,4 +1,4 @@
-package ru.laneboy.preparationforws
+package ru.laneboy.preparationforws.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,13 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ru.laneboy.preparationforws.databinding.FragmentSingInBinding
-import ru.laneboy.preparationforws.databinding.FragmentSplashScreenBinding
 
-class SingInFragment : Fragment() {
+class SignInFragment : Fragment() {
 
     private var _binding: FragmentSingInBinding? = null
     private val binding: FragmentSingInBinding
-        get() = _binding ?: throw RuntimeException("FragmentSingInBinding == null")
+        get() = _binding ?: throw RuntimeException("FragmentSignInBinding == null")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +32,8 @@ class SingInFragment : Fragment() {
 
     companion object {
 
-        fun newInstance(): SingInFragment {
-            return SingInFragment()
+        fun newInstance(): SignInFragment {
+            return SignInFragment()
         }
     }
 }

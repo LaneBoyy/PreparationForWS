@@ -1,4 +1,4 @@
-package ru.laneboy.preparationforws
+package ru.laneboy.preparationforws.presentation
 
 import android.animation.Animator
 import android.animation.Animator.AnimatorListener
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.coroutines.*
+import ru.laneboy.preparationforws.R
 import ru.laneboy.preparationforws.databinding.FragmentSplashScreenBinding
 
 class SplashScreenFragment : Fragment() {
@@ -50,8 +50,7 @@ class SplashScreenFragment : Fragment() {
 
     private fun launchSignInFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, SingInFragment.newInstance())
-            .addToBackStack(null)
+            .replace(R.id.fragment_container, SignInFragment.newInstance())
             .commit()
     }
 
