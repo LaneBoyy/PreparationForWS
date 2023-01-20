@@ -21,8 +21,22 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+//        ПОМЕНЯТЬ, КОГДА БУДЕТ ГОТОВО
+//        launchSplashScreenFragment()
+        launchMainScreenFragment()
+
+    }
+
+    private fun launchSplashScreenFragment() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, SplashScreenFragment.newInstance())
+            .commit()
+    }
+
+    private fun launchMainScreenFragment() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, MainScreenFragment.newInstance())
             .commit()
     }
 }

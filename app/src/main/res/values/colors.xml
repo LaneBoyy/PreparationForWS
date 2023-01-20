@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow_back_for_ll">#99FBF29F</color>
     <color name="yellow_dark">#BA918731</color>
-    <color name="btn_red">#974E4F</color>
-    <color name="btn_blue">#2A2A37</color>
+    <color name="red_dark">#974E4F</color>
+    <color name="blue_dark">#2A2A37</color>
+    <color name="grey">#93939A</color>
 </resources>
