@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/homeButton"
-        android:icon="@drawable/ic_smart_home"
+        android:icon="@drawable/ic_smart_home_logo"
         android:title="@string/text_home" />
     <item
         android:id="@+id/staticsButton"
