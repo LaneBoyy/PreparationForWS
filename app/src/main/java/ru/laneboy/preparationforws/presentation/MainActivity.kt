@@ -13,18 +13,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        )
-
+        removeStatusBar()
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
 //        ПОМЕНЯТЬ, КОГДА БУДЕТ ГОТОВО
-//        launchSplashScreenFragment()
-        launchMainScreenFragment()
+        launchSplashScreenFragment()
+//        launchMainScreenFragment()
 
     }
 
@@ -32,6 +27,13 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, SplashScreenFragment.newInstance())
             .commit()
+    }
+
+    private fun removeStatusBar() {
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        )
     }
 
     private fun launchMainScreenFragment() {

@@ -91,7 +91,7 @@
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn_background_red"
-        android:text="@string/string_new_resident"
+        android:text="@string/string_i_am_resident"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
