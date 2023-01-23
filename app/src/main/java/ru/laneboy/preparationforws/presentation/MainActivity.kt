@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 //        ПОМЕНЯТЬ, КОГДА БУДЕТ ГОТОВО
-        launchSplashScreenFragment()
-//        launchMainScreenFragment()
+//        launchSplashScreenFragment()
+        launchMainScreenFragment()
 
     }
 
