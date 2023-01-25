@@ -1,4 +1,4 @@
-package ru.laneboy.preparationforws.presentation
+package ru.laneboy.preparationforws.presentation.fragments
 
 import android.animation.Animator
 import android.animation.Animator.AnimatorListener

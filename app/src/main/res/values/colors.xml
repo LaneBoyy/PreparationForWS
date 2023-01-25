@@ -14,4 +14,6 @@
     <color name="blue_dark">#2A2A37</color>
     <color name="grey">#93939A</color>
     <color name="grey_light">#B1B1B1</color>
+    <color name="color_card_bg">#FEFEFE</color>
+    <color name="grey_background">#FEFEFE</color>
 </resources>

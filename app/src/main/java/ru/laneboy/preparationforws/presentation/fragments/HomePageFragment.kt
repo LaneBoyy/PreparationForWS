@@ -1,4 +1,4 @@
-package ru.laneboy.preparationforws.presentation
+package ru.laneboy.preparationforws.presentation.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
-import ru.laneboy.preparationforws.R
 import ru.laneboy.preparationforws.data.BoxDbModel
 import ru.laneboy.preparationforws.data.BoxesRepository
 import ru.laneboy.preparationforws.data.TypesOfBoxes

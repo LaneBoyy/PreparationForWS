@@ -1,10 +1,12 @@
-package ru.laneboy.preparationforws.presentation
+package ru.laneboy.preparationforws.presentation.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import ru.laneboy.preparationforws.R
 import ru.laneboy.preparationforws.databinding.ActivityMainBinding
+import ru.laneboy.preparationforws.presentation.fragments.MainScreenFragment
+import ru.laneboy.preparationforws.presentation.fragments.SplashScreenFragment
 
 class MainActivity : AppCompatActivity() {
 

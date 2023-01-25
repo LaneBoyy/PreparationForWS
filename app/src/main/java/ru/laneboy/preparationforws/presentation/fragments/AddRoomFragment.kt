@@ -1,11 +1,10 @@
-package ru.laneboy.preparationforws.presentation
+package ru.laneboy.preparationforws.presentation.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import ru.laneboy.preparationforws.R
 import ru.laneboy.preparationforws.databinding.FragmentAddRoomBinding
 
 class AddRoomFragment : Fragment() {
