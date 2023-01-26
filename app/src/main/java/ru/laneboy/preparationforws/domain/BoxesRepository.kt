@@ -1,7 +1,9 @@
-package ru.laneboy.preparationforws.data
+package ru.laneboy.preparationforws.domain
 
 import android.app.Application
 import androidx.lifecycle.LiveData
+import ru.laneboy.preparationforws.data.AppDatabase
+import ru.laneboy.preparationforws.data.BoxDbModel
 
 class BoxesRepository(
     private val application: Application

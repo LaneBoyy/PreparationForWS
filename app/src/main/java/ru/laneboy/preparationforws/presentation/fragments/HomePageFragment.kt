@@ -9,8 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
+import ru.laneboy.preparationforws.R
 import ru.laneboy.preparationforws.data.BoxDbModel
-import ru.laneboy.preparationforws.data.BoxesRepository
+import ru.laneboy.preparationforws.domain.BoxesRepository
 import ru.laneboy.preparationforws.data.TypesOfBoxes
 import ru.laneboy.preparationforws.databinding.FragmentHomePageBinding
 
@@ -37,6 +38,7 @@ class HomePageFragment : Fragment() {
         val boxItem = BoxDbModel(0, TypesOfBoxes.KITCHEN, 3)
 
         binding.btnAddRoom.setOnClickListener{
+            launchAddRoomFragment()
             lifecycleScope.launch {
                 repository.setBoxItem(boxItem)
             }
@@ -44,7 +46,7 @@ class HomePageFragment : Fragment() {
 
 
         repository.getBoxesList().observe(viewLifecycleOwner) {
-            Log.d("MainLogSuka", it.toString())
+            Log.d("MainLog", it.toString())
         }
     }
 
@@ -53,8 +55,11 @@ class HomePageFragment : Fragment() {
         _binding = null
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
+    private fun launchAddRoomFragment() {
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.main_fragment_container, AddRoomFragment.newInstance())
+            .addToBackStack(null)
+            .commit()
     }
 
     companion object {
