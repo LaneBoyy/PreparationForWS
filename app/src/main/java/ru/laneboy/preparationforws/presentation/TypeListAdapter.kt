@@ -1,5 +1,6 @@
 package ru.laneboy.preparationforws.presentation
 
+import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
@@ -12,6 +13,8 @@ class TypeListAdapter : ListAdapter<TypeItem, TypeItemViewHolder>(TypeItemDiffCa
 
     var onTypeItemClickListener: ((TypeItem) -> Unit)? = null
 
+    private var select = -1
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TypeItemViewHolder {
         val layout = R.layout.box_item_type_disable
         val view = LayoutInflater.from(parent.context).inflate(layout, parent, false)
@@ -21,6 +24,8 @@ class TypeListAdapter : ListAdapter<TypeItem, TypeItemViewHolder>(TypeItemDiffCa
     override fun onBindViewHolder(holder: TypeItemViewHolder, position: Int) {
         val typeItem = getItem(position)
         with(holder) {
+            flImageContainer.isSelected = select == position
+            tvTypesName.isSelected = select == position
             tvTypesName.text = typeItem.name.toString()
             when (typeItem.name) {
                 TypesOfBoxes.KITCHEN -> ivTypeImage.setImageResource(R.drawable.ic_kitchen)
@@ -35,7 +40,12 @@ class TypeListAdapter : ListAdapter<TypeItem, TypeItemViewHolder>(TypeItemDiffCa
             }
             view.setOnClickListener {
                 onTypeItemClickListener?.invoke(typeItem)
-
+                if (select != position) {
+                    val oldItem = select
+                    select = position
+                    notifyItemChanged(oldItem)
+                    notifyItemChanged(select)
+                }
             }
         }
     }
